@@ -4,6 +4,7 @@ class Song
 #Artist either creates the artist (if it doesn't exist yet) or finds the instance of the artist.
 
   Song.new_by_filename
+  
   #Parse a filename to find the song name and artist name (every file separates the song and artist with " - ")
 #Create a new song instance using the string from the filename.
 #Associate the new song with an artist using helper method: Song#artist().
