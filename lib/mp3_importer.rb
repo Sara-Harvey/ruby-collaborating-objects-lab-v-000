@@ -10,9 +10,3 @@ class MP3Importer
     @files.each {|file| Song.new_by_filename(file)}
   end
 end
-
-  def print_songs
-    self.songs.each {|song| puts song.name} 
-   end
-end
-end
