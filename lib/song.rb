@@ -5,9 +5,9 @@ class Song
 
   def self.new_by_filename(file)
    constructor = self.new 
-    constructor.name = file.split(/[^a-zA-Z\s]|\s-\s/)[1] 
-  constructor.artist_name = file.split(/[^a-zA-Z\s]|\s-\s/)[0]
-  constructor
+   constructor.artist_name = file.split(/[^a-zA-Z\s]|\s-\s/)[0]
+   constructor.name = file.split(/[^a-zA-Z\s]|\s-\s/)[1] 
+    constructor.genre = file.split[2]
 end
 
   
