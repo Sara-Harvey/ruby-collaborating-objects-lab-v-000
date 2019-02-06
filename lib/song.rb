@@ -3,7 +3,14 @@ class Song
   #Song creates songs for each filename and sends the artist's name (a string) to Artist.
 #Artist either creates the artist (if it doesn't exist yet) or finds the instance of the artist.
 
-  Song.new_by_filename
+  def self.new_by_filename(file)
+   constructor = self.new 
+    constructor.name = file.split(/[^a-zA-Z\s]|\s-\s/)[1] 
+  constructor.artist_name = file.split(/[^a-zA-Z\s]|\s-\s/)[0]
+  constructor
+end
+
+  
   
   #Parse a filename to find the song name and artist name (every file separates the song and artist with " - ")
 #Create a new song instance using the string from the filename.
